@@ -44,20 +44,20 @@ let handler = async (m, { conn }) => {
   let txt = `
 Merespon dalam ${speed} millidetik
 
-💬 Status :
+ðŸ’¬ Status :
 - *${groups.length}* Group Chats
 - *${groupsIn.length}* Groups Joined
 - *${groups.length - groupsIn.length}* Groups Left
 - *${chats.length - groups.length}* Personal Chats
 - *${chats.length}* Total Chats
 
-📱 *Phone Info* :
+ðŸ“± *Phone Info* :
 ${'```' + `
-🔋 Battery : ${conn.battery ? `${conn.battery.value}% ${conn.battery.live ? '🔌 Charging...' : '⚡ Discharging'}` : 'Unknown'}
+ðŸ”‹ Battery : ${conn.battery ? `${conn.battery.value}% ${conn.battery.live ? 'ðŸ”Œ Charging...' : 'âš¡ Discharging'}` : 'Unknown'}
 ${util.format(conn.user.phone)}
 `.trim() + '```'}
 
-💻 *Server Info* :
+ðŸ’» *Server Info* :
 RAM: ${format(os.totalmem() - os.freemem())} / ${format(os.totalmem())}
 
 _NodeJS Memory Usage_
@@ -69,16 +69,10 @@ ${cpus[0].model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type =>
 _CPU Core(s) Usage (${cpus.length} Core CPU)_
 ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}`).join('\n\n')}` : ''}
 `.trim()
-  conn.reply(m.chat, txt, { quoted: m, contextInfo: { externalAdReply :{
-mediaUrl: 'https://wa.me/62895603352610',
-mediaType: 2,
-title: 'Johannes',
-body: ' By @Johannes',
-thumbnailUrl: 'https://i.ibb.co/TYBsTsV/1890eb474e10.jpg',
-}}}) 
+  m.reply(txt)
 }
-handler.help = ['botstat']
+handler.help = ['speed']
 handler.tags = ['info']
 
-handler.command = /^(botstat)$/i
+handler.command = /^(speed|info)$/i
 module.exports = handler
