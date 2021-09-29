@@ -48,7 +48,7 @@ const freply = {key:{ fromMe:false, participant: `0@s.whatsapp.net`, ...(m.chat 
 						"businessOwnerJid": "994400448210@s.whatsapp.net"}}}    
 
 let info = `
-COMING SOON
+sc: https://github.com/MikuBotz/YUKIBOTZ
 `.trim()
 await conn.sendButton(m.chat, info, 'Made By Johannes ♥️', '↪️ BACK TO MENU', '#menu', { quoted: freply })
 }
