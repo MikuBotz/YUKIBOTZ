@@ -27,7 +27,7 @@ global.APIKeys = { // APIKey nya disini
   'https://rikka-api.herokuapp.com': 'beta',
   'https://pencarikode.xyz': 'pais',
   'https://api.lolhuman.xyz': 'HIRO',
-  'https://api.xteam.xyz': 'FuzBot1',
+  'https://api.xteam.xyz': 'apikeymu',
   'https://leyscoders-api.herokuapp.com': 'MIMINGANZ', 
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://api.zeks.xyz': 'ASJJMOFsjrVE8eZq1jgtGL4rGVE',
