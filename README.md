@@ -53,5 +53,7 @@ Thanks To
 * [`Adi Official`](https://github.com/Adi-officiall)
 * [`Aria Putra Pratama`](https://github.com/iniariaaa)
 * [`Zero Bot`](https://github.com/ZeroChanBot)
-* [`Fernazer`](https://github.com/Fernazer) Udah Bantu Upload in
+* [`Fernazer`](https://github.com/Fernazer) 
+
+Udah Bantu Upload in
 
