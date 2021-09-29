@@ -23,16 +23,16 @@
     "Games-wabot",
     "wabot-aq"
   ],
-  "homepage": "https://github.com/BochilGaming/games-wabot",
+  "homepage": "https://github.com/MikuBotz/YUKIBOTZ",
   "author": {
-    "name": "BochilGaming"
+    "name": "Johannes"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Nurutomo/wabot-aq.git"
+    "url": "git+https://github.com/MikuBotz/YUKIBOTZ"
   },
   "bugs": {
-    "url": "https://github.com/BochilGaming/games-wabot/issues"
+    "url": "https://github.com/MikuBotz/YUKIBOTZ/issues"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
