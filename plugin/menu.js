@@ -187,49 +187,50 @@ let tags = {
     let before = conn.menu.before || `
 Hai Kak %name 👋
 
-╭───◪ *𝙄𝙉𝙁𝙊 𝘽𝙊𝙏*
-│
-├❒ Bot Name : *${conn.getName(conn.user.jid)}*
-├❒ Browser : *${conn.browserDescription[1]}*
-├❒ Nomor Johannes : @62895603352610
-├❒ Utah Johannes : ${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik 
-├❒ Wa Web Name : *${conn.browserDescription[0]}*
-├❒ Wa Web Version : *${conn.browserDescription[2]}*
-├❒ Version : *%version*
-├❒ Battery : ${conn.battery ? `${conn.battery.value}%* ${conn.battery.live ? 'Charging' : 'Not Charged'}` : 'Not detected'}
-└❒ Total Features : *357+*
+◪ *𝙄 𝙉 𝙁 𝙊  𝘽 𝙊 𝙏*
 
-╭───◪ *𝙄𝙉𝙁𝙊 𝙐𝙎𝙀𝙍*
-│
-├❒ UserName : *%name*
-├❒ Serial Number : ${sn}
-├❒ Age : *${registered ? '' + age : ''}*
-├❒ Mention : *@${m.sender.replace(/@.+/, '')}*
-├❒ Number : *${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}*
-├❒ Role : *%role*
-├❒ Health : *%healt*
-├❒ Money : *$%money*
-├❒ Limit : *%limit*
-├❒ Level : *%level*
-├❒ Registered : *${registered ? 'Yes': 'No'}*
-└❒ Premium User : *${premium ? 'Premium': 'Gratisan'}*
+›› Bot Name : *${conn.getName(conn.user.jid)}*
+›› Browser : *${conn.browserDescription[1]}*
+›› Nomor Johannes : @62895603352610
+›› Utah Johannes : ${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik 
+›› Wa Web Name : *${conn.browserDescription[0]}*
+›› Wa Web Version : *${conn.browserDescription[2]}*
+›› Version : *%version*
+›› Battery : ${conn.battery ? `${conn.battery.value}%* ${conn.battery.live ? 'Charging' : 'Not Charged'}` : 'Not detected'}
+›› Total Features : *357+*
 
-╭───◪ *𝘿𝘼𝙏𝘼*
-│
-├❒ Uptime : *%uptime*
-├❒ Total Hit : *%totalsend*
-├❒ Main Uptime : *%muptime*
-├❒ Total Users : *%totalreg Users*
-├❒ Registered : *%rtotalreg*
-└❒ Time : *%time WIB*
+◪ *𝙄 𝙉 𝙁 𝙊  𝙐 𝙎 𝙀 𝙍*
+
+›› UserName : *%name*
+›› Serial Number : ${sn}
+›› Age : *${registered ? '' + age : ''}*
+›› Mention : *@${m.sender.replace(/@.+/, '')}*
+›› Number : *${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}*
+›› Role : *%role*
+›› Health : *%healt*
+›› Money : *$%money*
+›› Limit : *%limit*
+›› Level : *%level*
+›› Registered : *${registered ? 'Yes': 'No'}*
+›› Premium User : *${premium ? 'Premium': 'Gratisan'}*
+
+◪ *𝘿 𝘼 𝙏 𝘼*
+
+›› Uptime : *%uptime*
+›› Total Hit : *%totalsend*
+›› Main Uptime : *%muptime*
+›› Total Users : *%totalreg Users*
+›› Registered : *%rtotalreg*
+›› Time : *%time WIB*
 %readmore
 `
 
-    let header = conn.menu.header || '┌─⎔ ```%category``` ⎔'
-    let body   = conn.menu.body   || '╎➾ *%cmd%islimit*' 
-    let footer = conn.menu.footer || '└──────────────────❍\n'
+    let header = conn.menu.header || ' ──「 ```%category``` 」──\n '
+    let body   = conn.menu.body   || '🔖 *%cmd%islimit*' 
+    let footer = conn.menu.footer || ''
     let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered By @${global.conn.user.jid.split`@`[0]}`) + `\n*SPECIAL THANKS TO*\n\n*• Nurutomo*\n*• Ariffb25*\n*• Benniismael*\n*• Johannes*\n*• ZeroBot*\n*• Aria Putra*\n*• Adi Official*\n*• UdeanXD*\n*• Penyedia Apikey*\n*• Creator Bot WhatsApp*\n*• Dan Seluruh Pengguna Bot ini*`
     let _text  = before + '\n'
+
 
     for (let tag in groups) {
       _text += header.replace(/%category/g, tags[tag]) + '\n'
